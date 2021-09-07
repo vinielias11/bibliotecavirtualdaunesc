@@ -60,7 +60,7 @@ body {
 /* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
-    background-color: #504343;
+    background-color: #615d5d;
     padding: 20px 10px;
   }
 
@@ -118,3 +118,25 @@ body {
     position: absolute;
     left: 80px;
   }
+
+  .pesquisa {
+    background-color: #a5a5a5;
+    display: inherit;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #207207;
+    padding: 5px;
+    position: absolute;
+    top: 150px;
+    width: 1890px;
+    height: 700px;
+}
+
+#pi {
+  color: #207207;
+  font-family: "Trirong", serif;
+  font-size: 20px;
+  position: inherit;
+  left: 10px;
+}
