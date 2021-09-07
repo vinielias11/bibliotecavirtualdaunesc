@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import "cabecalho/header.css";
 
 body {
       background: var(--bg);
@@ -19,9 +18,9 @@ li {
   body.dark {
       background: #232629;
       color: #fafafa;
-      transition: background 0.2s linear;
+      transition: color 0.2s linear;
   }
-
+  
   .checkbox {
       opacity: 0;
       position: absolute;
