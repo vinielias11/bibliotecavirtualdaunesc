@@ -1,7 +1,11 @@
 'use strict'
 
 const chk = document.getElementById('chk');
+const theme = document.querySelector('#theme-link');
 chk.addEventListener('change', () => {
-	document.body.classList.toggle('dark');
-	document.getElementsByClassName("header").setAttribute("header", "headerdark");
+	if (theme.getAttribute("href") == "light-theme.css") {
+		theme.href = "dark-theme.css"
+	} else {
+		theme.href = "light-theme.css"
+	}
 });
