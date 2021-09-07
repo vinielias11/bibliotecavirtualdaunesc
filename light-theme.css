@@ -2,7 +2,7 @@
 
 body {
       background: var(--bg);
-      font-family: fantasy;
+      font-family: Arial, Helvetica, sans-serif;
       background-color: #fafafa;
       color: black;
       transition: background 0.2s linear;
