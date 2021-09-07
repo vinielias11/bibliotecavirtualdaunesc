@@ -7,11 +7,12 @@
     <title>Biblioteca Virtual da Unesc</title>
     <link rel="icon" href="img/unesc_LOGOIcone.png" type="icon">
     <link rel="stylesheet" href="light-theme.css" id="theme-link">
+    <link rel="stylesheet" href="pesquisa/caixaDePesquisa-light.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <div>
-        <input type="checkbox" class="checkbox" id="chk", onClick="onClick()" />
-        <label class="label" for="chk">
+        <input type="checkbox" class="checkbox" id="chk" />
+        <label class="quadradinho" for="chk">
             <i id="sol" class="material-icons">wb_sunny</i>
             <i id="lua" class="material-icons">brightness_3</i>
             <div class="ball"></div>
@@ -31,12 +32,119 @@
     
 </head>
 <body>
-    <div class="pesquisa">
-        <span id="pi">Pesquisa Geral</span>
-        <span id="caixaPesquisa">
-            <textarea rows="1" cols="60" placeholder="Digite um termo para pesquisa"></textarea>
-        </span>
+
+    <div class="pesquisaGeral">
+        <form action="">
+            <div class="row">
+                <div class="col-25">
+                    <label for="pGeral">Pesquisa Geral</label>
+                </div>
+                <div class="col-pesquisaInput">
+                    <input type="text" id="pGeral" name="pesquisageral" placeholder="Digite o termo para pesquisa...">
+                </div>
+                <div class="row">
+                    <input type="buscaGeral" value="Pesquisar">
+                  </div>
+            </div>
+        </form>
     </div>
+
+    <div class="container">
+        <form>
+          <div class="row">
+            <div class="col-75">
+              <input type="checkbox" id="palavra" name="palavra">
+              <label for="palavra">Palavra</label>
+              <input type="checkbox" id="indice" name="indice">
+              <label for="indice">Índice</label>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-25">
+                <label for="buscarpor">Buscar por:</label>
+              </div>
+              <div class="col-75">
+                    <select name="buscarpor" id="buscarpor">
+                        <option value="titulo">Titulo</option>
+                        <option value="autor">Autor</option>
+                    </select>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="registrosPorPg">Registros por página:</label>
+            </div>
+            <div class="col-75">
+                  <select name="registrosPorPg" id="registrosPorPg">
+                      <option value="20">20</option>
+                      <option value="30">30</option>
+                      <option value="40">40</option>
+                      <option value="50">50</option>
+                  </select>
+            </div>
+        </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="ordenacao">Ordenação:</label>
+            </div>
+            <div class="col-75">
+                <select name="ordenacao" id="ordenacao">
+                    <option value="titulo2">Título</option>
+                    <option value="anodePub">Ano de publicação</option>
+                </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="anoDePublicacao">Ano de Publicação:</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="anoDePublicacao" name="anoDePublicacao" placeholder="Digite o ano de publicação...">
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-25">
+                <label for="bibliotecas">Bibliotecas:</label>
+              </div>
+              <div class="col-75">
+                <select name="bibliotecas" id="bibliotecas">
+                    <option value="todas">Todas</option>
+                </select>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="tipoDeObra">Tipo de Obra:</label>
+            </div>
+            <div class="col-75">
+              <select name="tipoDeObra" id="tipoDeObra">
+                  <option value="todas">Todas</option>
+              </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+              <label for="colecao">Coleção:</label>
+            </div>
+            <div class="col-75">
+              <select name="colecao" id="colecao">
+                  <option value="todas">Todas</option>
+              </select>
+            </div>
+        </div>
+         
+          <div class="row">
+            <input type="submit" value="Pesquisar">
+          </div>
+        </form>
+      </div> 
 
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
