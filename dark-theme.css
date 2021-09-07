@@ -64,12 +64,8 @@ textarea {
 /* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
-    background-color: #615d5d;
+    background-color: #443d3d;
     padding: 20px 10px;
-  }
-
-  .headerdark {
-    background-color: rgb(233, 55, 55);
   }
   
   /* Style the header links */
