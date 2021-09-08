@@ -14,7 +14,9 @@ if (localStorage.getItem('tema') == 'escuro') {
 chk.addEventListener('change', () => {
 	if (theme.getAttribute("href") == "sobre-light-theme.css") {
 		theme.href = "sobre-dark-theme.css";
+		localStorage.setItem('tema', 'escuro');
 	} else {
 		theme.href = "sobre-light-theme.css";
+		localStorage.setItem('tema', 'claro');
 	}
 });

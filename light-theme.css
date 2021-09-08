@@ -8,10 +8,6 @@ body {
       transition: background 0.2s linear;
   }
 
-  textarea {
-    resize: none;
-    font-size: 16px;
-  }
   /* Começo do botão de trocar tema - Claro / Escuro */
   .checkbox {
       opacity: 0;
