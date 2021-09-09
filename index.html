@@ -10,28 +10,18 @@
     <link rel="stylesheet" href="pesquisa/caixaDePesquisa-light.css" id="theme-link2">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=NotoSans">
-    <div>
-        <input type="checkbox" class="checkbox" id="chk" />
-        <label class="quadradinho" for="chk">
-            <i id="sol" class="material-icons">wb_sunny</i>
-            <i id="lua" class="material-icons">brightness_3</i>
-            <div class="ball"></div>
-        </label>
-    </div>
-
-<div class="header">
-    <img src="img/unesc_LOGO.png" id="logo">
-    <div class="header-right">
-      <h2 id="titulo">Bem vindo à Biblioteca Virtual da Unesc!</h2>
-      <a class="active" href="#index.html">Página Inicial</a>
-      <a href="sobre/sobre.html">Sobre o site</a>
-      <a href="http://unesc.net/portal/" target="_blank">Portal da Unesc</a>
-    </div>
-  </div> 
-
-    
 </head>
 <body>
+
+    <div class="header">
+      <img src="img/unesc_LOGO.png" id="logo">
+      <div class="header-right">
+        <h2 id="titulo">Bem vindo à Biblioteca Virtual da Unesc!</h2>
+        <a class="active" href="#index.html">Página Inicial</a>
+        <a href="sobre/sobre.html">Sobre o site</a>
+        <a href="http://unesc.net/portal/" target="_blank">Portal da Unesc</a>
+      </div>
+    </div> 
 
     <div class="pesquisaGeral">
         <form action="">
@@ -43,7 +33,7 @@
                     <input type="text" id="pGeral" name="pesquisageral" placeholder="Digite o termo para pesquisa...">
                 </div>
                 <div class="row">
-                    <input type="buscaGeral" value="Pesquisar">
+                    <input type="submit" id="buscaGeral" value="Pesquisar">
                   </div>
             </div>
         </form>
@@ -145,6 +135,15 @@
           </div>
         </form>
       </div> 
+
+      <div>
+        <input type="checkbox" class="checkbox" id="chk" />
+        <label class="quadradinho" for="chk">
+            <i id="sol" class="material-icons">wb_sunny</i>
+            <i id="lua" class="material-icons">brightness_3</i>
+            <div class="ball"></div>
+        </label>
+    </div>
 
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>

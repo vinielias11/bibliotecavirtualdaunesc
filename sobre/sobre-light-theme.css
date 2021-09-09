@@ -103,6 +103,14 @@ body {
     .header-right {
       float: none;
     }
+    #logo {
+      float: none;
+      display: block;
+    }
+    #titulo {
+      float: none;
+      display: block;
+    }
   }
 
   #logo {
