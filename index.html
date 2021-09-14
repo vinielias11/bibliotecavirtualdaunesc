@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,149 +8,154 @@
     <link rel="icon" href="img/unesc_LOGOIcone.png" type="icon">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="light-theme.css" id="theme-link">
-    <link rel="stylesheet" href="pesquisa/caixaDePesquisa-light.css" id="theme-link2">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=NotoSans">
-</head>
-<body>
+    <link rel="stylesheet" href="pesquisa/caixaDePesquisa-light.css"
+      id="theme-link2">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
 
-    <div class="header">
+    <div class="cabecalho">
       <img src="img/unesc_LOGO.png" id="logo">
-      <div class="header-right">
+      <div class="cabecalho-right">
         <h2 id="titulo">Bem vindo à Biblioteca Virtual da Unesc!</h2>
         <a class="active" href="#index.html">Página Inicial</a>
         <a href="sobre/sobre.html">Sobre o site</a>
         <a href="http://unesc.net/portal/" target="_blank">Portal da Unesc</a>
       </div>
-    </div> 
+    </div>
 
     <div class="pesquisaGeral">
-        <form id="myForm">
-              <div class="row">
-                  <div class="col-25">
-                      <label for="search">Pesquisa Geral</label>
-                  </div>
-                  <div class="col-pesquisaInput">
-                      <input type="text" id="pGeral" name="pesquisageral" placeholder="Digite o termo para pesquisa...">
-                  </div>
-                  <div class="row">
-                    <button id="buscaGeral" type="button">Pesquisar</button>
-                  </div>
-            </div>
-        </form>
+      <form id="myForm">
+        <div class="row">
+          <div class="col-25">
+            <label for="search">Pesquisa Geral</label>
+          </div>
+          <div class="col-pesquisaInput">
+            <input type="text" id="pGeral" name="pesquisageral"
+              placeholder="Digite o termo para pesquisa...">
+          </div>
+          <div class="row">
+            <button id="buscaGeral" type="button">Pesquisar</button>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div id="results"></div>
 
     <div class="container">
-        <form>
-          <div class="row">
-            <div class="col-75">
-              <input type="checkbox" id="palavra" name="palavra">
-              <label for="palavra">Palavra</label>
-              <input type="checkbox" id="indice" name="indice">
-              <label for="indice">Índice</label>
-            </div>
+      <form>
+        <div class="row">
+          <div class="col-75">
+            <input type="checkbox" id="palavra" name="palavra">
+            <label for="palavra">Palavra</label>
+            <input type="checkbox" id="indice" name="indice">
+            <label for="indice">Índice</label>
           </div>
-
-          <div class="row">
-              <div class="col-25">
-                <label for="buscarpor">Buscar por:</label>
-              </div>
-              <div class="col-75">
-                    <select name="buscarpor" id="buscarpor">
-                        <option value="titulo">Titulo</option>
-                        <option value="autor">Autor</option>
-                    </select>
-              </div>
-          </div>
-
-          <div class="row">
-            <div class="col-25">
-              <label for="registrosPorPg">Registros por página:</label>
-            </div>
-            <div class="col-75">
-                  <select name="registrosPorPg" id="registrosPorPg">
-                      <option value="20">20</option>
-                      <option value="30">30</option>
-                      <option value="40">40</option>
-                      <option value="50">50</option>
-                  </select>
-            </div>
-        </div>
-
-          <div class="row">
-            <div class="col-25">
-              <label for="ordenacao">Ordenação:</label>
-            </div>
-            <div class="col-75">
-                <select name="ordenacao" id="ordenacao">
-                    <option value="titulo2">Título</option>
-                    <option value="anodePub">Ano de publicação</option>
-                </select>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-25">
-              <label for="anoDePublicacao">Ano de Publicação:</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="anoDePublicacao" name="anoDePublicacao" placeholder="Digite o ano de publicação...">
-            </div>
-          </div>
-
-          <div class="row">
-              <div class="col-25">
-                <label for="bibliotecas">Bibliotecas:</label>
-              </div>
-              <div class="col-75">
-                <select name="bibliotecas" id="bibliotecas">
-                    <option value="todas">Todas</option>
-                </select>
-              </div>
-          </div>
-
-          <div class="row">
-            <div class="col-25">
-              <label for="tipoDeObra">Tipo de Obra:</label>
-            </div>
-            <div class="col-75">
-              <select name="tipoDeObra" id="tipoDeObra">
-                  <option value="todas">Todas</option>
-              </select>
-            </div>
         </div>
 
         <div class="row">
-            <div class="col-25">
-              <label for="colecao">Coleção:</label>
-            </div>
-            <div class="col-75">
-              <select name="colecao" id="colecao">
-                  <option value="todas">Todas</option>
-              </select>
-            </div>
-        </div>
-         
-          <div class="row">
-            <input type="submit" value="Pesquisar">
+          <div class="col-25">
+            <label for="buscarpor">Buscar por:</label>
           </div>
-        </form>
-      </div> 
+          <div class="col-75">
+            <select name="buscarpor" id="buscarpor">
+              <option value="titulo">Titulo</option>
+              <option value="autor">Autor</option>
+            </select>
+          </div>
+        </div>
 
-      <div>
-        <input type="checkbox" class="checkbox" id="chk" />
-        <label class="quadradinho" for="chk">
-            <i id="sol" class="material-icons">wb_sunny</i>
-            <i id="lua" class="material-icons">brightness_3</i>
-            <div class="ball"></div>
-        </label>
+        <div class="row">
+          <div class="col-25">
+            <label for="registrosPorPg">Registros por página:</label>
+          </div>
+          <div class="col-75">
+            <select name="registrosPorPg" id="registrosPorPg">
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="ordenacao">Ordenação:</label>
+          </div>
+          <div class="col-75">
+            <select name="ordenacao" id="ordenacao">
+              <option value="titulo2">Título</option>
+              <option value="anodePub">Ano de publicação</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="anoDePublicacao">Ano de Publicação:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="anoDePublicacao" name="anoDePublicacao"
+              placeholder="Digite o ano de publicação...">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="bibliotecas">Bibliotecas:</label>
+          </div>
+          <div class="col-75">
+            <select name="bibliotecas" id="bibliotecas">
+              <option value="todas">Todas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="tipoDeObra">Tipo de Obra:</label>
+          </div>
+          <div class="col-75">
+            <select name="tipoDeObra" id="tipoDeObra">
+              <option value="todas">Todas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="colecao">Coleção:</label>
+          </div>
+          <div class="col-75">
+            <select name="colecao" id="colecao">
+              <option value="todas">Todas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="submit" value="Pesquisar">
+        </div>
+      </form>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <div>
+      <input type="checkbox" class="checkbox" id="chk" />
+      <label class="quadradinho" for="chk">
+        <i id="sol" class="material-icons">wb_sunny</i>
+        <i id="lua" class="material-icons">brightness_3</i>
+        <div class="ball"></div>
+      </label>
+    </div>
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
-</body>
+  </body>
 </html>

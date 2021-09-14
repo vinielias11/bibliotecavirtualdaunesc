@@ -6,14 +6,14 @@
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
-    font-family: Noto Sans;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   /* Estilo para o label */
   label {
     padding: 12px 12px 12px 0;
     display: inline-block;
-    font-family: Noto Sans;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   /* Estilo do botão de busca */
