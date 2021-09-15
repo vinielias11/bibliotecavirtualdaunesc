@@ -123,3 +123,11 @@ body {
     position: absolute;
     left: 80px;
   }
+
+  .listaLivros {
+    text-align: center;
+  }
+
+  #pesquisaResultados {
+    visibility: hidden;
+  }

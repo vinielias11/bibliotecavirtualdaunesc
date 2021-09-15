@@ -43,7 +43,7 @@
   }
 
   /* Estilo para o input de pesquisa geral */
-  .col-pesquisaInput {
+  .coluna-pesquisaInput {
     float: left;
     width: 60%;
     margin-top: 6px;
@@ -78,21 +78,21 @@
   }
   
   /* Floating column for labels: 25% width */
-  .col-25 {
+  .coluna-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
   }
   
   /* Floating column for inputs: 75% width */
-  .col-75 {
+  .coluna-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
   }
   
   /* Clear floats after the columns */
-  .row:after {
+  .linha:after {
     content: "";
     display: table;
     clear: both;

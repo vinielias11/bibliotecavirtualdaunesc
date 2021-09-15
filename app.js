@@ -25,10 +25,13 @@ chk.addEventListener('change', () => {
 });
 
 function bookSearch () {
+    var item, titulo, autor, publisher, bookLink, bookImg;
     var search = document.getElementById('pGeral').value;
 
     if (search == '') {
         $("#results").empty();
+        desabilitaResultados();
+        alert ('Digite algo para pesquisar!')
     }
 
     $("#results").innerHTML = "";
@@ -43,12 +46,23 @@ function bookSearch () {
                 results.innerHTML += "<h2>" + data.items[i].volumeInfo.title + "</h2>"
             }
         },
-
+        
         type: 'GET'
     })
 }
 
+function habilitaResultados () {
+    var caixa = document.getElementById('pesquisaResultados');
+    caixa.style.visibility = 'visible';
+}
+
+function desabilitaResultados () {
+    var caixa = document.getElementById('pesquisaResultados');
+    caixa.style.visibility = 'hidden';
+}
+
 $("#buscaGeral").on('click', function() {
+    habilitaResultados();
     bookSearch();
 });
 
