@@ -25,8 +25,8 @@ chk.addEventListener('change', () => {
 });
 
 function bookSearch () {
-    var item, titulo, autor, publisher, bookIsbn, bookLink, bookImg, 
-    placeholder = '<img src="https://via.placeholder.com/150">';
+    var item, numero, titulo, autor, publisher, bookLink, bookImg; 
+    var placeholder = '<img src="https://via.placeholder.com/150">';
     var search = document.getElementById('pGeral').value;
 
     if (search == '') {
@@ -43,16 +43,17 @@ function bookSearch () {
         dataType: "json",
 
         success: function (data) {
-            for (i = 0; i < data.items.length; i++) {
+            for (var i = 0; i < data.items.length; i++) {
                 // results.innerHTML += "<h2>" + data.items[i].volumeInfo.title + "</h2>"
                 item = data.items[i];
                 titulo = item.volumeInfo.title;
-                autor = item.volumeInfo.author;
-                publisher = item.volumeInfo.publisher;
+                autor = item.volumeInfo.authors;
+                publisher = item.volumeInfo.authors.publisher;
                 bookLink = item.volumeInfo.previewLink;
-                bookIsbn = item.volumeInfo.industryIdentifiers[1].identifier;
                 bookImg = (item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : placeholder;
-                results.innerHTML += '<div style="margin-top: 4px;">' + formatOutput(bookImg, titulo, autor, publisher, bookLink)
+                numero = (item.volumeInfo.industryIdentifiers[1].identifier) ? item.volumeInfo.industryIdentifiers[1].identifier : 'não encontrado' ;
+                results.innerHTML += '<div class="row mt-4">' + formatOutput(bookImg, titulo, autor, publisher, bookLink, numero)
+                                     '</div>';
             }
         },
         
@@ -60,6 +61,27 @@ function bookSearch () {
     })
 }
 
+function formatOutput (bookImg, titulo, autor, publisher, bookLink, numero) {
+    var viewUrl = 'livro.html?isbn='+numero; //constructing link for bookviewer
+    var htmlCard = `<div class="col-lg-6">
+      <div class="card" style="">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="${bookImg}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${titulo}</h5>
+              <p class="card-text">Autor: ${autor}</p>
+              <p class="card-text">Publisher: ${publisher}</p>
+              <a target="_blank" href="${viewUrl}" class="btn btn-secondary">Ler o livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`
+    return htmlCard;
+}
 
 
 function habilitaResultados () {
